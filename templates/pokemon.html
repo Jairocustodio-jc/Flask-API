@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ pokemon_data.name }} - Detalles del Pokémon</title>
+</head>
+<body>
+    <h1>{{ pokemon_data.name }}</h1>
+    <h2>Tipo:</h2>
+    <ul>
+        {% for type in pokemon_data.type %}
+        <li>{{ type }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Imágenes:</h2>
+    <div>
+        {% for image in pokemon_data.images %}
+        <img src="{{ image }}" alt="{{ pokemon_data.name }} Image">
+        {% endfor %}
+    </div>
+    <h2>Movimientos:</h2>
+    <ul>
+        {% for move in pokemon_data.moves %}
+        <li>{{ move }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
