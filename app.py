@@ -50,7 +50,7 @@ def get_pokemon_moves(data):
     moves = []
     if 'moves' in data:
         for move_data in data['moves']:
-            moves.append(move_data['move']['name'].capitalize())
+            moves.append(move_data['move']['name'])
     return moves
 
 if __name__ == '__main__':
